@@ -19,9 +19,8 @@ export const ContainerCentral = styled.div`
   height: 100vh;
   flex-direction: row;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    height: 100vh;
     width: 100%;
   }
 `;
@@ -34,31 +33,46 @@ export const Container1 = styled.div`
   height: 100%;
   background: #252424;
   border-right: #d9d9d9 solid 1px;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1024px) {
     display: none;
+    flex: 0.5;
   }
 `;
+
 export const Divlogo = styled.div`
   display: flex;
-  justyfi-content: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 60px;
-  width: 600px;
+  width: 500px;
   padding: 25px;
   margin-left: 180px;
   background: transparent;
-  box-shadow: "5px 5px 15px 5px #c8c8c8";
+  box-shadow: 5px 5px 15px 5px #c8c8c8;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
+
 export const LogoImg = styled.img`
   border-radius: 2vh;
-  max-width: 200vh;
-  max-height: 100vh;
+  max-width: 200px;
+  max-height: 100px;
   background: transparent;
-  @media screen and (max-width: 768px) {
-    align-items: center;
-    max-width: 30vh;
-    max-height: 30vh;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40px;
+    margin-bottom: 30px;
+
   }
 `;
 
@@ -67,17 +81,18 @@ export const Container2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   padding: 20px;
   height: 94.2%;
 
-  @media screen and (max-width: 768px) {
-   
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 20px;
   }
 `;
+
 export const StyleH2 = styled.h2`
   font-family: cursive;
   font-size: 64px;
@@ -85,13 +100,18 @@ export const StyleH2 = styled.h2`
   color: #ffff;
   text-shadow: black 0.1em 0.1em 0.2em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     color: #000;
     text-shadow: #c8c8c8 0.1em 0.1em 0.2em;
-    font-size: 24px;
+    font-size: 48px;
     text-align: center;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
+
 export const LoginForm = styled.form`
   align-items: center;
   border: 2px solid #d9d9d9;
@@ -103,11 +123,90 @@ export const LoginForm = styled.form`
   padding: 20px;
 
   @media screen and (max-width: 768px) {
-   display: flex;
-    justyfi-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 600px;
-    height: 100vh;
+    width: 90%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+  }
+`;
+
+export const FormRegister = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #c8c8c8;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  background: #faf7f6;
+
+  @media (max-width: 1024px) {
+    width: 1024px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 768px;
+        height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+        height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  div {
+    width: 100%;
+        height: auto;
+
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > .MuiTextField-root {
+      width: 100%;
+          height: auto;
+
+    }
+
+    & > .MuiCheckbox-root {
+      margin-top: 10px;
+    }
+
+    & > span {
+      font-family: sans-serif;
+      font-size: 14px;
+      color: #212f3c;
+      margin-left: 8px;
+    }
+  }
+
+  button {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 `;

@@ -8,10 +8,11 @@ type ButtonName = 'Enviar' | 'Cancelar' | 'Confirmar' | 'Voltar';
 interface ButtonProps {
   type?: 'submit' | 'button';
   buttonName: ButtonName;
+  onClick: ()=> void;
 
 }
-export const ButtonSend: React.FC<ButtonProps> = ({ type = 'submit', buttonName }) => {
-  const isMobile = useMediaQuery('(max-width: 768px');
+export const ButtonSend: React.FC<ButtonProps> = ({ type = 'submit', buttonName, onClick }) => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
 
   return (
@@ -29,7 +30,7 @@ export const ButtonSend: React.FC<ButtonProps> = ({ type = 'submit', buttonName 
           variant="contained"
           size='large'
           type={type}
-
+          onClick={onClick}
         >
           {buttonName}
         </Button>
