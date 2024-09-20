@@ -19,18 +19,19 @@ export const ButtonSend: React.FC<ButtonProps> = ({ type = 'submit', buttonName,
 
     <Box sx={{
       width: isMobile ? '100%' : '100%',
-      marginBottom: '20px',
+      height: 65,
     }}>
       <Stack
         spacing={2}
         direction="row"
-        style={{ display: 'flex', justifyContent: 'center', padding: 20, marginTop: '20px', marginBottom: '30px' }}
+        style={{ display: 'flex', justifyContent: 'center', padding: 20, marginBottom: '30px' }}
       >
         <Button
           variant="contained"
           size='large'
           type={type}
           onClick={onClick}
+          style={{width: isMobile ? '200px' : '200px'}}
         >
           {buttonName}
         </Button>

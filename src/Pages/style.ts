@@ -37,6 +37,7 @@ export const Container1 = styled.div`
   @media screen and (max-width: 1024px) {
     display: none;
     flex: 0.5;
+    height: 
   }
 `;
 
@@ -45,33 +46,34 @@ export const Divlogo = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 60px;
-  width: 500px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-rigth: auto;
+  width: 600px;
+  height: 400px;
   padding: 25px;
-  margin-left: 180px;
   background: transparent;
-  box-shadow: 5px 5px 15px 5px #c8c8c8;
-
   @media screen and (max-width: 768px) {
     margin-left: 0;
+    margin-top: 30px;
+    padding: 0;
+    backgound-color: #000;
   }
 `;
 
 export const LogoImg = styled.img`
-  border-radius: 2vh;
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 500px;
+  max-height: 300px;
   background: transparent;
-  margin-bottom: 30px;
-
+  margin-bottom: 5px;
   @media (max-width: 768px) {
-    width: 60px;
-    margin-bottom: 30px;
+    width: 100px;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 480px) {
-    width: 40px;
-    margin-bottom: 30px;
+    width: 100px;
+    margin-bottom: 10px;
 
   }
 `;
