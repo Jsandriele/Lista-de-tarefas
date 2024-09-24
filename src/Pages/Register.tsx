@@ -17,6 +17,9 @@ interface IFormProps{
 export default function Register() {
   const { register, handleSubmit, formState: {errors},watch } = useForm<IFormProps>();
   const { width } = useWindowSize()
+
+  console.log({errors})
+
   const onSubmit: SubmitHandler<IFormProps>= (data) => {
     console.log(data);
   };
@@ -48,8 +51,7 @@ export default function Register() {
             {...register('name', { required: true })}
             sx={{ width: 300, color: '#fff' }}
             fullWidth
-            error={!!errors.name}
-            helperText={errors.name?.message}
+          
           />
         </div>
         <div
@@ -63,11 +65,9 @@ export default function Register() {
             hiddenLabel
             type="email"
             label="Email"
-            {...register('Email', { required: true, })}
+            {...register('emael', { required: true, })}
             sx={{ width: 300 }}
             fullWidth
-            error={!!errors.email}
-            helperText={errors.email?.message}
           />
 
         </div>
@@ -87,14 +87,13 @@ export default function Register() {
               minLength: 6,
               maxLength: 8,
               pattern: {
-                
+                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,8}$/,
                 message: 'A senha deve ter entre 6 e 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'
               }
             })}
             sx={{ width: 300 }}
             fullWidth
-            error={!!errors.senha}
-            helperText={errors.senha?.message}
+          
           />
 
         </div>
@@ -116,8 +115,7 @@ export default function Register() {
             })}
             sx={{ width: 300 }}
             fullWidth
-            error={!!errors.confirmarsenha}
-            helperText={errors.confirmarsenha?.message}
+            
           />
         </div>
         <div>
