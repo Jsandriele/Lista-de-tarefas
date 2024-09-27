@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import SettingsIcon from '@mui/icons-material/Settings';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import RoomPreferencesIcon from '@mui/icons-material/RoomPreferences';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Link } from 'react-router-dom';
 import Logo1 from '../../assets/Logo1.png';
 
@@ -13,9 +14,11 @@ interface SideBarProps {
 
 const SideBar: React.FC<SideBarProps> = ({ open, onClose }) => {
   const menuItems = [
-    { text: 'Home', icon: <HomeIcon />, path: '/' },
-    { text: 'Tarefas', icon: <InfoIcon />, path: '/about' },
-    { text: 'Settings', icon: <SettingsIcon />, path: '/settings' },
+    { text: 'Home', icon: <HomeIcon />, path: '/Dashbord' },
+    { text: 'Tarefas', icon: <AssignmentIcon />, path: '/task' },
+    { text: 'Projetos', icon: <RoomPreferencesIcon />, path: '/project' },
+    { text: 'Calendário', icon: <CalendarMonthIcon/>, path: '/calendar' },
+
   ];
 
   return (
